@@ -193,10 +193,10 @@ Write a program that uses a for loop to calculate the total cost
 '''
 Example Solution
 '''
-costs = [8.30, 7.12, 5.01, 1.00, 0.99, 5.92, 3.50, "Erik", "Li"]
+# costs = [8.30, 7.12, 5.01, 1.00, 0.99, 5.92, 3.50, "Erik", "Li"]
 
-clean_costs = [round(x) for x in costs if type(x) != str]
-print(sum(clean_costs))
+#clean_costs = [round(x) for x in costs if type(x) != str]
+#print(sum(clean_costs))
 
 '''
 There is an easier way to do the last program without a for loop. 
@@ -268,47 +268,59 @@ Example solution
 """
 Values in a dictionary are accessed using their keys
 """
-# person = {
-#     'name': 'Jessica',
-#     'age': 23,
-#     'height': 172
-# }
-#
-# print(person['name'])
+'''
+users = [
+    { 'name': 'Erik', 'role': 'dbeng', 'roles': ['securietyRole1']},
+    { 'name': 'Li', 'role': 'software eng'},
+]
 
+usernames = [user['name'] for user in users]
+print(usernames)
+'''
 
 ### EXERCISE 6 ###
 """
  Print the values of name, post_code and street_number from the dictionary
 """
-# place = {
-#     'name': 'The Anchor',
-#     'post_code': 'E14 6HY',
-#     'street_number': '54',
-#     'location': {
-#         'longitude': 127,
-#         'latitude': 63,
-#     }
-# }
+'''
+place = {
+     'name': 'The Anchor',
+     'post_code': 'E14 6HY',
+     'street_number': '54',
+     'location': {
+         'longitude': 127,
+         'latitude': 63,
+         'gpssystem': {
+             'satelite': 'satelite1',
+         }
+     }
+}
+'''
+
+#place['location']['gpssystem']['satelite'] = 'apolloalpha'
+# print(place['location']['gpssystem']['satelite'])
+
 
 '''
 Example solution
 '''
 
-#place = {
-#    'name': 'The Anchor',
-#    'post_code': 'E14 6HY',
-#    'street_number': '54',
-#    'location': {
-#        'longitude': 127,
-#        'latitude': 63,
-#    }
-#}
+place = {
+    'name': 'The Anchor',
+    'post_code': 'E14 6HY',
+    'street_number': '54',
+    'location': {
+        'longitude': 127,
+        'latitude': 63,
+    }
+}
 
 #print(place['name'])
 #print(place['post_code'])
 #print(place['street_number'])
 
+#for values in place.items():
+#    print(values)
 
 '''
 Extension: Print the values of longitude and latitude from the inner dictionary
@@ -391,19 +403,14 @@ Extension: Using list of verbs and a list of nouns, create randomised sentences
 Tuple examples
 """
 
-# # Tuple cannot be changed
-#
-# order = ('croissant', 'coffee', 'juice')
-#
-#
-# # This throws an error
-#
-# order.append('porridge')
-#
-#
-# # Tuple behaves very similar to list
-#
-# order = ('croissant', 'coffee', 'juice')
+# Tuple cannot be changed
+
+order = ('Croissant', 'Coffee', 'Juice')
+
+expanded_order = [item for item in order]
+expanded_order.append('orange juice')
+expanded_order = tuple(expanded_order)
+
 #
 # print(order[1])
 #
@@ -416,13 +423,12 @@ Tuple examples
 Set examples
 """
 
-# my_set = {1,2,3,4,5, 'hi', 7}
-#
-#
-# # We can add new elements to a set
-# my_set = {1,2,3}
-# my_set.add(4)
-# print(my_set)
+#orders1 = {'coffee', 'baguette'}
+#orders2 = {'orange juice', 'baguette'}
+
+# checking for intersection (what exists in both sets)
+#orders = orders1.intersection(orders2)
+#print(orders)
 #
 #
 # # No duplicate values in Set -- Try adding a new value to a set if it is already there
