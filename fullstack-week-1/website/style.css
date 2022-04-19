@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Square Peg', cursive;
 }
@@ -5,4 +6,10 @@ body {
 p {
     color: gray;
     font-size: 30px;
+}
+
+img {
+    width: 255px;
+    height: 255px;
+    border-radius: 8px;
 }
