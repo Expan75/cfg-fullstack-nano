@@ -1,13 +1,17 @@
 import './Button.css';
 
-function Button() {
-  
-  function whenButtomPressed() {
+function Button(props) {
 
-    const characters = ['Paul', 'Tieto', 'Baron Harkonen']
-    const validChar = characters.filter(char => char === 'Paul')
+  let idx = 0;
+  let msg = props.buttonText
 
-    console.log(`${validChar} is of house Atredies!`)
+  function whenButtomPressed() {  
+    idx++
+    if (idx === props.messages.length) {
+      idx = 0
+    }
+    msg = props.messages[idx]
+    console.log(msg)
   }
 
   return (
@@ -15,10 +19,11 @@ function Button() {
       <button 
         className="duneButton"
         onClick={whenButtomPressed}
-        >Click Me!
+        >{msg}
       </button>
     </>
   );
 }
+
 
 export default Button;
