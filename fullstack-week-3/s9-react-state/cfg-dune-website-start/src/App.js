@@ -9,7 +9,6 @@ import ClassButton from './ClassButton.js';
 import StatefulButtonClass from './StatefulClassButton';
 import StatefulFunctionButton from './StatefulFunctionButton';
 
-
 function App() {
   return (
     <div className="App">
@@ -21,10 +20,9 @@ function App() {
         {/* A JSX comment */}
         {/* <Button */}
         {/* <ClassButton */}
-
         {/* <StatefulClassButton */}
         {/* <StatefulFunctionButton */}
-        <StatefulButtonClass
+        <Button
           buttonText = "Output Dune message" 
           quotes = {[
             'He who controls the spice controls the whole universe!',

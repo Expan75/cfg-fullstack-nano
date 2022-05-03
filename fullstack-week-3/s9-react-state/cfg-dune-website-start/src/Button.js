@@ -2,16 +2,17 @@ import './Button.css';
 
 function Button(props) {
   let quoteIdx = 0
-  let msg = ''
+  let quote = ''
 
   function whenButtomPressed() {
-    msg = props.messages[quoteIdx]
-    console.log(msg)
     
     quoteIdx++
-    if (quoteIdx === props.messages.length) {
+    if (quoteIdx === props.quotes.length - 1) {
       quoteIdx = 0
     }
+    
+    quote = props.quotes[quoteIdx]
+    console.log(quote)
   }
 
   return (
