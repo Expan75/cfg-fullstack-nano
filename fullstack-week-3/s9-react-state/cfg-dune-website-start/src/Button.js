@@ -1,17 +1,17 @@
 import './Button.css';
 
 function Button(props) {
+  let quoteIdx = 0
+  let msg = ''
 
-  let idx = 0
-  let msg = props.buttonText
-
-  function whenButtomPressed() {  
-    idx++
-    if (idx === props.messages.length) {
-      idx = 0
-    }
-    msg = props.messages[idx]
+  function whenButtomPressed() {
+    msg = props.messages[quoteIdx]
     console.log(msg)
+    
+    quoteIdx++
+    if (quoteIdx === props.messages.length) {
+      quoteIdx = 0
+    }
   }
 
   return (
@@ -19,7 +19,7 @@ function Button(props) {
       <button 
         className="duneButton"
         onClick={whenButtomPressed}
-        >{msg}
+        >{props.buttonText}
       </button>
     </>
   );
