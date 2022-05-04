@@ -1,0 +1,8 @@
+.duneButton {
+  border: 2px solid black;
+  font-size: 22px;
+  color: yellow;
+  background-color: blue;
+  font-weight: bold;
+  padding: 10px;
+}
