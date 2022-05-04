@@ -1,15 +1,8 @@
 import './App.css';
 import logo from './logo.svg';
-
-// old with inadequate state handling
-import Button from './Button.js';
-import ClassButton from './ClassButton.js';
-
-// both styles correct state handling
-import StatefulButtonClass from './StatefulClassButton';
 import StatefulFunctionButton from './StatefulFunctionButton';
 
-function App() {
+function StatefulApp() {
   return (
     <div className="App">
       <header className="App-header">
@@ -17,12 +10,7 @@ function App() {
         <p>Books are fun to read and can be very helpful for learning new stuff</p>
         <p>Rules of book reading are fairly self-explanatory</p>
 
-        {/* A JSX comment */}
-        {/* <Button */}
-        {/* <ClassButton */}
-        {/* <StatefulClassButton */}
-        {/* <StatefulFunctionButton */}
-        <Button
+        <StatefulFunctionButton
           buttonText = "Output Dune message" 
           quotes = {[
             'He who controls the spice controls the whole universe!',
@@ -35,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default StatefulApp;

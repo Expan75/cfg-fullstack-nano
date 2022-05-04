@@ -1,12 +1,50 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
+import './index.css';
+
+import App from './App';
+import About from './About';
+import StatefulApp from './StatefulApp';
+
+const Routing = () => {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/notbroken">Not broken</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<App />}/>
+          <Route path="/notbroken" element={<StatefulApp />}/>
+          <Route path="/about" element={<About />}/>
+        </Routes>
+      </div>
+    </Router>
+  )
+}
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Routing />
   </React.StrictMode>,
   document.getElementById('root')
 );
