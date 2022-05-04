@@ -10,6 +10,7 @@ class StatefulClassButton extends React.Component {
     
     whenButtomPressed() {
         this.setState((state, props) => {
+            console.log('logging state+props: ', state, props)
             if (state.quoteIdx === props.quotes.length - 1) {
                 return { quoteIdx: 0 }
             } else {

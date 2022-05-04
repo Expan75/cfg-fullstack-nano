@@ -5,14 +5,14 @@ function Button(props) {
   let quote = ''
 
   function whenButtomPressed() {
-    
-    quoteIdx++
-    if (quoteIdx === props.quotes.length - 1) {
-      quoteIdx = 0
-    }
-    
     quote = props.quotes[quoteIdx]
     console.log(quote)
+    
+    if (quoteIdx === props.quotes.length - 1) {
+      quoteIdx = 0
+    } else {
+      quoteIdx++
+    }
   }
 
   return (
@@ -22,6 +22,7 @@ function Button(props) {
         onClick={whenButtomPressed}
         >{props.buttonText}
       </button>
+      <p>Quote: {quote}</p>
     </>
   );
 }

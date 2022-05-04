@@ -1,6 +1,7 @@
 import './Button.css';
 import React from 'react';
 
+
 class ButtonClass extends React.Component {
     constructor(props) {
         super(props);
@@ -25,6 +26,7 @@ class ButtonClass extends React.Component {
                 onClick={this.whenButtomPressed}
                 >{ this.props.buttonText }
               </button>
+              <p>Quote: {this.props.quotes[this.state.quoteIdx]}</p>
             </>
           );
     }

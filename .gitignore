@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Ignore installed dependencies
+node_module/
+
 # Macos
 .DS_Store
 
