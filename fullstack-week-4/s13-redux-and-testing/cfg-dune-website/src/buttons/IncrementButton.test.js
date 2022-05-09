@@ -9,7 +9,7 @@ describe('Test incrementButton user journey (short one but still)', () => {
     beforeEach(() => {
         component = new IncrementButton()
         component.setState = jest.fn()
-    })
+    });
 
     test('handle button click', () => {
         expect(component.state.counterValue).toBe(0);

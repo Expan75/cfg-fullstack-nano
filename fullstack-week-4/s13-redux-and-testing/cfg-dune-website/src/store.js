@@ -2,13 +2,13 @@ import { createStore } from 'redux';
 
 
 const quoteReducer = (state, action) => {
+    console.log('event emitted', state, action)
+
     switch (action.type) {
-        case 'counterValue/increment':
-            return { value: state.counterValue===2 ? state.counterValue + 1 : 0 }
+        case 'increment': return { counterValue: state.counterValue + 1 }
         default: return state
     }
 }
 
 let store = createStore(quoteReducer, { counterValue: 0 })
-
 export default store;

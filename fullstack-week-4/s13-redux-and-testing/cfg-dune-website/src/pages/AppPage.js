@@ -1,9 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import Button from './Button.js'
-import IncrementButton from './IncrementButton.js'
+import logo from '../logo.svg';
+import Button from './../buttons/Button';
+import IncrementButton from './../buttons/IncrementButton';
 
-function App() {
+function AppPage() {
   return (
     <div className="App">
       <header className="App-header">
@@ -23,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppPage;
