@@ -6,7 +6,6 @@ class IncrementButton extends React.Component {
     super(props);
 
     this.state = {counterValue: 0};
-
     this.whenButtonPressed = this.whenButtonPressed.bind(this);
   }
 

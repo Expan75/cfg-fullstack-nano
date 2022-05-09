@@ -10,6 +10,8 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import { Provider } from 'react-redux'
+import store from './store';
 
 const Routing = () => {
   return(
@@ -37,7 +39,9 @@ const Routing = () => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routing />
+    <Provider store={store}>
+      <Routing />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
