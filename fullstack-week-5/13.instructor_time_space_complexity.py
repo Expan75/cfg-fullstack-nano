@@ -107,7 +107,7 @@ second 2 appears after second 3.
 
 
 # SOLUTION 1
-# O(n^2) time | O(1) space --> n is the length of input array
+# O3 time | O(1) space --> n is the length of input array
 
 def first_dupe_value1(array):
     min_second_idx = len(array)
@@ -183,5 +183,5 @@ def first_dupe_value3(array):
         array[abs_val - 1] *= -1
     return -1
 
-#test = [1,2,3,3,5,6,7,7]
-#print(first_dupe_value3(test))
+test = [1,2,3,3,5,6,7,7]
+print(first_dupe_value3(test))
