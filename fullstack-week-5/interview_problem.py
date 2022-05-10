@@ -29,9 +29,10 @@ second 2 appears after second 3.
 
 input = [2,1,5,3,3,2,4]
 
+
 def solution(input=input):
     pass
 
 
 if __name__ == '__main__':
-    print(solution)
+    print(solution())
