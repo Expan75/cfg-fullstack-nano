@@ -3,9 +3,10 @@ This function runs in O(1) time (or "constant time") relative to its input.
 The input list could be 1 item or 1,000 items, but this function would still just require one "step."
 """
 
-
 def print_first_item(items):
     print(items[0])
+
+
 
 
 """
@@ -14,23 +15,27 @@ If the list has 10 items, we have to print 10 times.
 If it has 1,000 items, we have to print 1,000 times.
 """
 
+""" O(n)"""
+
+items = range(0,5)
 
 def print_all_items(items):
     for item in items:
         print(item)
-
 
 """
 Thus this function runs in O(n^2) time (or "quadratic time").
 If the list has 10 items, we have to print 100 times.
 """
 
-
 def print_all_possible_ordered_pairs(items):
     for first_item in items:
         for second_item in items:
             print(first_item, second_item)
 
+#print_all_items(items)
+#print("----")
+#print_all_possible_ordered_pairs(items)
 
 """
 This is O(2n), which we just call O(n).
@@ -46,9 +51,11 @@ def print_all_items_twice(items):
     for item in items:
         print(item)
 
+# print_all_items_twice(items)
+
 
 """
-This is O(1 + n/2 + 100), which we just call O(n).
+This is O(1 + 0.5 * n + 100), which we just call O(n).
 for big O notation we're looking at what happens as n gets arbitrarily large.
 As n gets really big, adding 100 or dividing by 2 has a decreasingly significant effect.
 """
@@ -175,3 +182,6 @@ def first_dupe_value3(array):
         # make that value negative by multiplying to -1
         array[abs_val - 1] *= -1
     return -1
+
+#test = [1,2,3,3,5,6,7,7]
+#print(first_dupe_value3(test))
