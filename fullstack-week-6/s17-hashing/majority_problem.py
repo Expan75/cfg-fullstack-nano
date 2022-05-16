@@ -20,10 +20,10 @@ def find_majority_bf(numbers):
 # SOLUTION 2: Using a hashtable (dictionary), O(n) 
 def find_majority(numbers):
     counts = {n: 1 for n in numbers}
-    for index, n in enumerate(numbers):
-        counts[n] = counts[n]+1
-        if counts[n] >= len(numbers)//2:
-            return n
+    for number in numbers:
+        counts[number] = counts[number]+1
+        if counts[number] >= len(numbers)//2:
+            return number
     return -1
 
 #majority_number = find_majority(numbers)
