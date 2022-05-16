@@ -27,7 +27,7 @@ class Node:
         if self.next == None:
             return None
         else:
-            return self.search(self.next)
+            return self.search(self.next, key=key, value=value)
 
 class HashTable:
     def __init__(self):
@@ -48,7 +48,6 @@ class HashTable:
         return hashsum
 
     def insert(self, key, value):
-        
         self.size += 1
         index = self.hash(key)
         node = self.buckets[index]
@@ -56,17 +55,25 @@ class HashTable:
         # insert using append in bucket if not first value (linear probing-ish)
         if node is None:
             self.buckets[index] = Node(key,value)
-            return
         else:
             self.buckets[index].append(key,value)
+
+        #print(self.buckets)
         
     def find(self, key):
         index = self.hash(key)
         bucket = self.buckets[index]
         return bucket.search(key)
 
-hashtable = HashTable()
-hashtable.insert("hello", 1)
-hashtable.insert("world", 2)
-value = hashtable.find("hello")
-print(f"key=hello, value={value}")
+
+if __name__ == '__main__':
+    hashtable = HashTable()
+    hashtable.insert("hello", 1)
+    hashtable.insert("world", 2)
+    value = hashtable.find("hello")
+    print(f"key=hello, value={value}")
+
+
+    # What happens when we get a collision? Try "hello" and "Hello" for keys!
+
+

@@ -27,7 +27,10 @@ def find_majority(numbers):
     return -1
 
 #majority_number = find_majority(numbers)
-majority_number = find_majority_bf(numbers)
+majority_number = find_majority(numbers)
 print(f"Majority is: {majority_number}")
 
 
+# exam handout
+# language req.
+# no idea about extra time coding exercises?

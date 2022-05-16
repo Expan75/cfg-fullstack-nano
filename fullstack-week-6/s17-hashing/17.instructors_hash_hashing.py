@@ -1,37 +1,31 @@
 # EXAMPLEs FOR VIDEO GUIDE 2
 
-# # hash for integer unchanged
-# print('Hash for 100 is:', hash(100))
+# hash for integer unchanged
+#rint('Hash for 100 is:', hash(100))
 # # hash for decimal
-# print('Hash for 100.55 is:', hash(100.55))
+#print('Hash for 100.55 is:', hash(100.55))
 # # hash for string
-# print('Hash for CFG is:', hash('CFG'))
-# # hash for tuple
-# word = ('g', 'i', 'r', 'l', 's')
-# print('The hash is:', hash(word))
+#print('Hash for CFG is:', hash('CFG'))
+# hash for tuple
+word = ('g', 'i', 'r', 'l', 's')
+#print('The hash is:', hash(word))
 
 
-# class CFGStudent:
-#
-#     def __init__(self, age, name):
-#         self.age = age
-#         self.name = name
-#
-#     def __eq__(self, other):
-#         return self.age == other.age and self.name == other.name
-#
-#     def __hash__(self):
-#         print('The hash is:')
-#         return hash((self.age, self.name))
-#
-#
-# person = CFGStudent(30, 'Nina')
-# print(hash(person))
+class CFGStudent:
+    def __init__(self, age, name):
+        self.age = age
+        self.name = name
+    def __eq__(self, other):
+        return self.age == other.age and self.name == other.name
+    def __hash__(self):
+        print('The hash is:')
+        return hash((self.age, self.name))
+person = CFGStudent(30, 'Nina')
+#print(hash(person))
 
 ###################################################################
 
 # GENERAL DICTIONARY EXERCISES
-
 """
 Python program to find the sum of all items in a dictionary.
 
@@ -40,23 +34,21 @@ Output : 600
 """
 
 # # option 1
-# # def return_sum(my_dict):
-# #     sum = 0
-# #     for i in my_dict:
-# #         sum = sum + my_dict[i]
-# #     return sum
-# #
-# #
-# # # option 2
-# # def return_sum(my_dict):
-# #     sum = 0
-# #     for i in my_dict.values():
-# #         sum = sum + i
-# #     return sum
-# #
-# #
-# # dict = {'a': 100, 'b': 200, 'c': 300}
-# # print("Sum :", return_sum(dict))
+def return_sum1(my_dict):
+    sum = 0
+    for i in my_dict:
+       sum = sum + my_dict[i]
+    return sum
+
+# option 2
+def return_sum2(my_dict):
+    sum = 0
+    for i in my_dict.values():
+        sum = sum + i
+    return sum 
+
+dict = {'a': 100, 'b': 200, 'c': 300}
+print("Sum :", return_sum1(dict))
 
 #####################################################################
 
@@ -66,15 +58,15 @@ Ways to sort list of dictionaries by values in Python.
 1. We are going to use itemgettor operator
 """
 
-# from operator import itemgetter
-#
-# my_list = [
-#     {"name": "Zainab", "age": 20},
-#     {"name": "Natasha", "age": 20},
-#     {"name": "Sahitya", "age": 19}]
-#
-# print("The list printed sorting by age: ")
-# print(sorted(my_list, key=itemgetter('age')))
+from operator import itemgetter
+
+my_list = [
+     {"name": "Zainab", "age": 20},
+     {"name": "Natasha", "age": 20},
+     {"name": "Sahitya", "age": 19}]
+
+print("The list printed sorting by age: ")
+print(sorted(my_list, key=itemgetter('age')))
 #
 # print("\r")
 #
